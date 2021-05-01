@@ -13,7 +13,7 @@ import hashlib
 
 from PIL import Image
 
-
+#import Lime
 
 # Data Viz Pkgs
 import matplotlib.pyplot as plt 
@@ -265,13 +265,25 @@ A vaccine can prevent hepatitis B, but there's no cure if you have the condition
 
 	"""
 
+about_temp="""
+<h1>Application Built By:</h1>
+
+<ul>
+<li>Ritvik Mahajan: GCET/71/17 (Computer Engg.)</li>
+<li>Sachit: GCET/49/17 (Computer Engg.)</li>
+<li>Rohit Raina: GCET/214/17 (Computer Engg.)</li>
+
+
+</ul>
+
+"""
 
 
 def main():
 	st.markdown(html_temp.format('royalblue'),unsafe_allow_html=True)
 
 
-	menu = ["Home","Login","SignUp","About"]
+	menu = ["Home","Login","SignUp","Facts","About"]
 	submenu = ["Plot","Prediction","Interpret"]
 
 
@@ -306,8 +318,13 @@ def main():
 
 
 
-	elif choice =='About':
+	elif choice =='Facts':
 		st.markdown(about_message,unsafe_allow_html=True)
+
+	elif choice =='About' :
+		st.markdown(about_temp,unsafe_allow_html=True)
+
+
 
 		
 			
