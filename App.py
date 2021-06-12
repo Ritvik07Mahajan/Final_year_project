@@ -185,7 +185,7 @@ A vaccine can prevent hepatitis B, but there's no cure if you have the condition
     <li>Weakness and fatigue</li>
     <li>Yellowing of your skin and the whites of your eyes (jaundice)</li>
 </ul>
-<img src="http://image2.slideserve.com/4875645/hepatitis-b-symptoms-n.jpg" width="700" height="500">
+<img src="https://as2.ftcdn.net/jpg/02/74/76/49/500_F_274764991_TMWF6bghSCTaUYzYgRuHL1Pgo4qzCjAW.jpg" width="700" height="500">
  <h3>When to see a doctor</h3><p>If you know you've been exposed to hepatitis B, contact your doctor immediately. A preventive treatment may reduce your risk of infection if you receive the treatment within 24 hours of exposure to the virus.</p>
 <p>If you think you have signs or symptoms of hepatitis B, contact your doctor.</p>
         
