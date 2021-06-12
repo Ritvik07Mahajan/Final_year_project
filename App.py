@@ -1,6 +1,4 @@
-[theme]
-base="dark"
-primaryColor="purple"
+
 # Core Pkgs
 import streamlit as st 
 
