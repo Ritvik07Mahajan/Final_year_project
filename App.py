@@ -284,7 +284,7 @@ def main():
 
 
 	menu = ["Home","Login","SignUp","Facts","About"]
-	submenu = ["Plot","Prediction","Interpret"]
+	submenu = ["Plot","Prediction"]
 
 
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -425,38 +425,7 @@ def main():
 							st.subheader("Prediction Probability Score using {}".format(model_choice))
 							st.json(pred_probability_score)
 							
-					if st.checkbox("Interpret"):
-						if model_choice == "KNN":
-							loaded_model = load_model("models/knn_hepB_model.pkl")
-							
-						elif model_choice == "DecisionTree":
-							loaded_model = load_model("models/decision_tree_clf_hepB_model.pkl")
-							
-						else:
-							loaded_model = load_model("models/logistic_regression_hepB_model.pkl")
-							
-
-							# loaded_model = load_model("models/logistic_regression_model.pkl")							
-							# 1 Die and 2 Live
-							df = pd.read_csv("data/clean_hepatitis_dataset.csv")
-							x = df[['age', 'sex', 'steroid', 'antivirals','fatigue','spiders', 'ascites','varices', 'bilirubin', 'alk_phosphate', 'sgot', 'albumin', 'protime','histology']]
-							feature_names = ['age', 'sex', 'steroid', 'antivirals','fatigue','spiders', 'ascites','varices', 'bilirubin', 'alk_phosphate', 'sgot', 'albumin', 'protime','histology']
-							class_names = ['Die(1)','Live(2)']
-							explainer = lime.lime_tabular.LimeTabularExplainer(x.values,feature_names=feature_names, class_names=class_names,discretize_continuous=True)
-							# The Explainer Instance
-							exp = explainer.explain_instance(np.array(feature_list), loaded_model.predict_proba,num_features=13, top_labels=1)
-							exp.show_in_notebook(show_table=True, show_all=False)
-							# exp.save_to_file('lime_oi.html')
-							st.write(exp.as_list())
-							new_exp = exp.as_list()
-							label_limits = [i[0] for i in new_exp]
-							# st.write(label_limits)
-							label_scores = [i[1] for i in new_exp]
-							plt.barh(label_limits,label_scores)
-							st.pyplot()
-							plt.figure(figsize=(20,10))
-							fig = exp.as_pyplot_figure()
-							st.pyplot()
+					
 
 
 	
