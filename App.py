@@ -350,6 +350,7 @@ def main():
 					
 
 					df['class'].value_counts().plot(kind='bar')
+					st.set_option('deprecation.showPyplotGlobalUse', False)
 					st.pyplot()
 
 					# Freq Dist Plot
